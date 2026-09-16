@@ -40,6 +40,39 @@ if($_SERVER["REQUEST_METHOD"]){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px 15px;
+        }
+
+        button {
+            background-color: blue;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <form action="" method="post">
