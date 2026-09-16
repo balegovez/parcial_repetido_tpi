@@ -1,0 +1,9 @@
+services:
+  apache:
+    build: ./apache
+    restart: always
+    container_name: server-apache3
+    ports:
+      - "8090:80"
+    volumes:
+      - ./proyectos:/var/www/html
