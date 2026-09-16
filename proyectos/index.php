@@ -6,6 +6,7 @@ $_SESSION['datos'] = [
     'producto' => ''
 ];
 
+const IVA = 0.13;
 
 
 $productos = [
@@ -29,17 +30,7 @@ if($_SERVER["REQUEST_METHOD"]){
     if(!array_key_exists($productoSeleccionado, $productos)) {
         $errores[] = "El producto seleccionado no es válido.";
     }
-
-    if(empty($errores)) {
-        $_SESSION['datos'] = [
-            'usuario' => $usuario,
-            'producto' => $productos[$productoSeleccionado]
-        ];
-        header("Location: index.php");
-        exit();
-    }
 }
-
 
 ?>
 
@@ -62,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"]){
             <?php endforeach; ?>
         </select><br><br>
 
-        <label for="cantidad">Cantidad:</label>
+        <label for="cantidad">Cantidad por producto:</label>
         <input type="number" name="cantidad" id="cantidad" min="1" value="1"> <br><br>
 
         <button type="submit">Enviar</button>
